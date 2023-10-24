@@ -18,7 +18,7 @@ form.addEventListener("submit", e => {
 })
 
 // Récupérer les messages et mettre à jour le DOM
-socket.on('chat message', (msg, pseudo) => {
+socket.on('chat message', (pseudo, msg) => {
     const item = document.createElement('li')
     item.textContent = `${pseudo} : ${msg}`
     messages.appendChild(item)
